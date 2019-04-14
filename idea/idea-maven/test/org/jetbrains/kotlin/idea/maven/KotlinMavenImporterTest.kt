@@ -25,6 +25,7 @@ import com.intellij.openapi.roots.LibraryOrderEntry
 import com.intellij.openapi.roots.ModuleRootManager
 import com.intellij.openapi.roots.impl.libraries.LibraryEx
 import com.intellij.psi.codeStyle.CodeStyleSettingsManager
+import com.intellij.testFramework.TestDataPath
 import com.intellij.util.PathUtil
 import junit.framework.TestCase
 import org.jetbrains.jps.model.java.JavaResourceRootType
@@ -50,9 +51,12 @@ import org.jetbrains.kotlin.platform.impl.*
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.resolve.TargetPlatform
 import org.jetbrains.kotlin.resolve.jvm.platform.JvmPlatform
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.junit.Assert
+import org.junit.runner.RunWith
 import java.io.File
 
+@RunWith(JUnit3RunnerWithInners::class)
 class KotlinMavenImporterTest : MavenImportingTestCase() {
     private val kotlinVersion = "1.1.3"
 
