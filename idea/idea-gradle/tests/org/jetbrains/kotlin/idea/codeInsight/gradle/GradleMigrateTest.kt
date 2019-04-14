@@ -15,13 +15,15 @@ import org.jetbrains.kotlin.config.LanguageVersion
 import org.jetbrains.kotlin.idea.configuration.KotlinMigrationProjectComponent
 import org.jetbrains.kotlin.idea.configuration.KotlinMigrationProjectComponent.MigrationTestState
 import org.jetbrains.kotlin.idea.configuration.MigrationInfo
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.kotlin.test.testFramework.runInEdtAndWait
 import org.jetbrains.plugins.gradle.tooling.annotation.TargetVersions
 import org.junit.Assert
 import org.junit.Test
+import org.junit.runner.RunWith
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
-
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleMigrateTest : GradleImportingTestCase() {
     @Test
     @TargetVersions("4.4+")

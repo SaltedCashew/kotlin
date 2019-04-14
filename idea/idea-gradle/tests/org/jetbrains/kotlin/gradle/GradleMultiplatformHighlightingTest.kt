@@ -17,11 +17,14 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiDocumentManager
 import org.jetbrains.kotlin.idea.codeInsight.gradle.GradleImportingTestCase
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.kotlin.test.testFramework.runInEdtAndWait
 import org.jetbrains.plugins.gradle.tooling.annotation.TargetVersions
 import org.junit.Assert
 import org.junit.Test
+import org.junit.runner.RunWith
 
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleMultiplatformHighlightingTest : GradleImportingTestCase() {
 
     @TargetVersions("4.7+")

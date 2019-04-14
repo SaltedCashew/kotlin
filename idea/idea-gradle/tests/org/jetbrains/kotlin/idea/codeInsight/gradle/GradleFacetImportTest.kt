@@ -53,10 +53,12 @@ import org.jetbrains.kotlin.platform.impl.isCommon
 import org.jetbrains.kotlin.platform.impl.isJavaScript
 import org.jetbrains.kotlin.resolve.TargetPlatform
 import org.jetbrains.kotlin.resolve.jvm.platform.JvmPlatform
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.kotlin.test.KotlinTestUtils
 import org.junit.Assert
 import org.junit.Ignore
 import org.junit.Test
+import org.junit.runner.RunWith
 import java.util.*
 
 internal fun GradleImportingTestCase.facetSettings(moduleName: String) = KotlinFacet.get(getModule(moduleName))!!.configuration.settings
@@ -72,7 +74,7 @@ internal fun GradleImportingTestCase.getSourceRootInfos(moduleName: String): Lis
         it.sourceFolders.map { it.url.replace(projectPath, "") to it.rootType }
     }
 }
-
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleFacetImportTest : GradleImportingTestCase() {
     private var isCreateEmptyContentRootDirectories = true
 

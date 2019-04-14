@@ -16,12 +16,14 @@ import com.intellij.testFramework.fixtures.IdeaTestFixtureFactory
 import org.jetbrains.kotlin.idea.inspections.gradle.GradleKotlinxCoroutinesDeprecationInspection
 import org.jetbrains.kotlin.idea.inspections.runInspection
 import org.jetbrains.kotlin.idea.test.PluginTestCaseBase
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.kotlin.test.KotlinTestUtils
 import org.jetbrains.kotlin.test.testFramework.runInEdtAndWait
 import org.junit.Test
+import org.junit.runner.RunWith
 import java.io.File
 import kotlin.reflect.KMutableProperty0
-
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleQuickFixTest : GradleImportingTestCase() {
     private lateinit var codeInsightTestFixture: CodeInsightTestFixture
 

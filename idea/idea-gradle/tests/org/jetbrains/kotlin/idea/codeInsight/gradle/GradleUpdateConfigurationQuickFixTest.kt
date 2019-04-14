@@ -24,11 +24,13 @@ import com.intellij.rt.execution.junit.FileComparisonFailure
 import com.intellij.testFramework.fixtures.CodeInsightTestFixture
 import com.intellij.testFramework.fixtures.IdeaTestFixtureFactory
 import org.jetbrains.kotlin.idea.test.PluginTestCaseBase
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.kotlin.test.testFramework.runInEdtAndWait
 import org.junit.Test
+import org.junit.runner.RunWith
 import java.io.File
 import kotlin.reflect.KMutableProperty0
-
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleUpdateConfigurationQuickFixTest : GradleImportingTestCase() {
     private lateinit var codeInsightTestFixture: CodeInsightTestFixture
 

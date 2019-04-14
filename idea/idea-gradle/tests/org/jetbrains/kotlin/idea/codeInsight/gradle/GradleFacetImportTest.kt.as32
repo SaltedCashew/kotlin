@@ -49,9 +49,11 @@ import org.jetbrains.kotlin.platform.impl.isCommon
 import org.jetbrains.kotlin.platform.impl.isJavaScript
 import org.jetbrains.kotlin.resolve.TargetPlatform
 import org.jetbrains.kotlin.resolve.jvm.platform.JvmPlatform
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.kotlin.test.KotlinTestUtils
 import org.junit.Assert
 import org.junit.Test
+import org.junit.runner.RunWith
 import java.util.*
 
 internal fun GradleImportingTestCase.facetSettings(moduleName: String) = KotlinFacet.get(getModule(moduleName))!!.configuration.settings
@@ -62,6 +64,7 @@ internal val GradleImportingTestCase.facetSettings: KotlinFacetSettings
 internal val GradleImportingTestCase.testFacetSettings: KotlinFacetSettings
     get() = facetSettings("project_test")
 
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleFacetImportTest : GradleImportingTestCase() {
     @Test
     fun testJvmImport() {

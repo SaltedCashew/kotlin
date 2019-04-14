@@ -12,8 +12,11 @@ import org.jetbrains.kotlin.idea.configuration.KotlinGradleSharedMultiplatformMo
 import org.jetbrains.kotlin.idea.configuration.KotlinGradleWebMultiplatformModuleBuilder
 import org.jetbrains.kotlin.idea.test.KotlinSdkCreationChecker
 import org.jetbrains.kotlin.konan.target.HostManager
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.junit.Test
+import org.junit.runner.RunWith
 
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleMultiplatformWizardTest : AbstractGradleMultiplatformWizardTest() {
 
     lateinit var sdkCreationChecker: KotlinSdkCreationChecker

@@ -21,14 +21,16 @@ import org.jetbrains.kotlin.idea.util.projectStructure.allModules
 import org.jetbrains.kotlin.konan.library.konanCommonLibraryPath
 import org.jetbrains.kotlin.konan.library.konanPlatformLibraryPath
 import org.jetbrains.kotlin.platform.impl.isKotlinNative
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.plugins.gradle.util.GradleConstants
 import org.junit.Assert.*
 import org.junit.Test
+import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
-
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleNativeLibrariesInIDENamingTest : GradleImportingTestCase() {
 
     // Test naming of Kotlin/Native libraries in projects with Gradle plugin 1.3.21+

@@ -13,11 +13,14 @@ import org.jetbrains.kotlin.idea.caches.resolve.analyzeWithContent
 import org.jetbrains.kotlin.idea.core.script.ScriptDependenciesManager
 import org.jetbrains.kotlin.idea.util.application.runReadAction
 import org.jetbrains.kotlin.psi.KtFile
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.plugins.gradle.tooling.annotation.TargetVersions
 import org.jetbrains.plugins.gradle.util.GradleConstants
 import org.junit.Ignore
 import org.junit.Test
+import org.junit.runner.RunWith
 
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleBuildFileHighlightingTest : GradleImportingTestCase() {
 
     @TargetVersions("4.8+")

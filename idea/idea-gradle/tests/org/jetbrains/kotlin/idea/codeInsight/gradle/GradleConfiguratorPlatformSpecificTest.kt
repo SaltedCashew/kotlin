@@ -8,10 +8,13 @@ package org.jetbrains.kotlin.idea.codeInsight.gradle
 import org.jetbrains.kotlin.config.LanguageFeature
 import org.jetbrains.kotlin.idea.configuration.KotlinWithGradleConfigurator
 import org.jetbrains.kotlin.idea.util.application.executeWriteCommand
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.kotlin.test.testFramework.runInEdtAndWait
 import org.jetbrains.plugins.gradle.tooling.annotation.TargetVersions
 import org.junit.Test
+import org.junit.runner.RunWith
 
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleConfiguratorPlatformSpecificTest : GradleImportingTestCase() {
     @TargetVersions("4.7+")
     @Test

@@ -22,11 +22,13 @@ import com.intellij.openapi.util.Ref
 import com.intellij.openapi.vfs.VirtualFile
 import org.jetbrains.kotlin.idea.inspections.gradle.DifferentKotlinGradleVersionInspection
 import org.jetbrains.kotlin.idea.inspections.runInspection
+import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.jetbrains.plugins.gradle.tooling.annotation.TargetVersions
 import org.junit.Assert
 import org.junit.Test
+import org.junit.runner.RunWith
 import java.io.File
-
+@RunWith(JUnit3RunnerWithInners::class)
 class GradleInspectionTest : GradleImportingTestCase() {
     @Test
     fun testDifferentStdlibGradleVersion() {
