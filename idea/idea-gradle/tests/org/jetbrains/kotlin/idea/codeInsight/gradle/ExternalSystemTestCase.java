@@ -39,6 +39,7 @@ import com.intellij.util.ThrowableRunnable;
 import com.intellij.util.containers.ContainerUtil;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.kotlin.test.testFramework.KtUsefulTestCase;
 import org.junit.After;
 import org.junit.Before;
 
@@ -54,7 +55,7 @@ import java.util.List;
 import static org.jetbrains.kotlin.test.testFramework.EdtTestUtil.runInEdtAndWait;
 
 // part of com.intellij.openapi.externalSystem.test.ExternalSystemTestCase
-public abstract class ExternalSystemTestCase extends UsefulTestCase {
+public abstract class ExternalSystemTestCase extends KtUsefulTestCase {
 
     protected IdeaProjectTestFixture myTestFixture;
 
