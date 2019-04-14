@@ -55,7 +55,7 @@ import java.util.List;
 import static org.jetbrains.kotlin.test.testFramework.EdtTestUtil.runInEdtAndWait;
 
 // part of com.intellij.openapi.externalSystem.test.ExternalSystemTestCase
-public abstract class ExternalSystemTestCase extends KtUsefulTestCase {
+public abstract class ExternalSystemTestCase extends UsefulTestCase {
 
     protected IdeaProjectTestFixture myTestFixture;
 
