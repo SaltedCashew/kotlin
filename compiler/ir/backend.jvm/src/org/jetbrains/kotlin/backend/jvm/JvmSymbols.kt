@@ -13,6 +13,7 @@ import org.jetbrains.kotlin.descriptors.ClassKind
 import org.jetbrains.kotlin.descriptors.Modality
 import org.jetbrains.kotlin.descriptors.Visibilities
 import org.jetbrains.kotlin.descriptors.impl.EmptyPackageFragmentDescriptor
+import org.jetbrains.kotlin.incremental.components.NoLookupLocation
 import org.jetbrains.kotlin.ir.builders.declarations.*
 import org.jetbrains.kotlin.ir.declarations.IrClass
 import org.jetbrains.kotlin.ir.declarations.IrDeclarationOrigin
@@ -295,11 +296,9 @@ class JvmSymbols(
         addTypeParameter("T", irBuiltIns.anyNType)
     }.symbol
 
-    val cloneable = buildClass {
-        name = Name.identifier("Cloneable")
-        kind = ClassKind.INTERFACE
-    }.apply {
-        parent = kotlinPackage
-        kotlinPackage.addChild(this)
-    }.symbol
+    // We cannot create Cloneable reference out of thin air, since we have to preserve the information that it is a Java interface and
+    // it has no DefaultImpls counterpart.
+    val cloneable = symbolTable.referenceClass(
+        builtInsPackage("kotlin").getContributedClassifier(Name.identifier("Cloneable"), NoLookupLocation.FROM_BACKEND) as ClassDescriptor
+    )
 }

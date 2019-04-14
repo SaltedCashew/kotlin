@@ -161,7 +161,8 @@ private fun IrDeclarationWithVisibility.specialCaseVisibility(kind: OwnerKind?):
 //    if (JvmCodegenUtil.isNonIntrinsicPrivateCompanionObjectInInterface(memberDescriptor)) {
 //        return ACC_PUBLIC
 //    }
-    if (this is IrClass && isCompanion && Visibilities.isPrivate(visibility)) { // TODO: non-intrinsic
+    if (this is IrClass && Visibilities.isPrivate(visibility) &&
+            parent.safeAs<IrClass>()?.let { it.isInterface } ?: false) { // TODO: non-intrinsic
         return Opcodes.ACC_PUBLIC
     }
 
