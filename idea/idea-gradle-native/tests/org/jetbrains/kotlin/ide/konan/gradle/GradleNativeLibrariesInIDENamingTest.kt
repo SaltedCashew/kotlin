@@ -30,7 +30,6 @@ import org.junit.runners.Parameterized
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleNativeLibrariesInIDENamingTest : GradleImportingTestCase() {
 
     // Test naming of Kotlin/Native libraries in projects with Gradle plugin 1.3.21+

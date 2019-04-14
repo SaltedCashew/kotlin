@@ -74,7 +74,6 @@ internal fun GradleImportingTestCase.getSourceRootInfos(moduleName: String): Lis
         it.sourceFolders.map { it.url.replace(projectPath, "") to it.rootType }
     }
 }
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleFacetImportTest : GradleImportingTestCase() {
     private var isCreateEmptyContentRootDirectories = true
 

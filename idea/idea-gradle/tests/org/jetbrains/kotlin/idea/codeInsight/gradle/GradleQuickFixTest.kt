@@ -23,7 +23,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.File
 import kotlin.reflect.KMutableProperty0
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleQuickFixTest : GradleImportingTestCase() {
     private lateinit var codeInsightTestFixture: CodeInsightTestFixture
 

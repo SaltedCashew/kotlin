@@ -21,7 +21,6 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleConfiguratorTest : GradleImportingTestCase() {
 
     @Test

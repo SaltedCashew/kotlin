@@ -32,7 +32,6 @@ import org.jetbrains.kotlin.test.KotlinTestUtils
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@RunWith(JUnit3RunnerWithInners::class)
 class MultiplatformProjectImportingTest : MultiplePluginVersionGradleImportingTestCase() {
 
     private fun legacyMode() = gradleVersion.split(".")[0].toInt() < 4

@@ -28,7 +28,6 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.File
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleInspectionTest : GradleImportingTestCase() {
     @Test
     fun testDifferentStdlibGradleVersion() {

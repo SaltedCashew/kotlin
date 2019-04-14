@@ -24,7 +24,6 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleMultiplatformHighlightingTest : GradleImportingTestCase() {
 
     @TargetVersions("4.7+")

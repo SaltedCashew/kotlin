@@ -20,7 +20,6 @@ import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleBuildFileHighlightingTest : GradleImportingTestCase() {
 
     @TargetVersions("4.8+")

@@ -14,7 +14,6 @@ import org.jetbrains.plugins.gradle.tooling.annotation.TargetVersions
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleConfiguratorPlatformSpecificTest : GradleImportingTestCase() {
     @TargetVersions("4.7+")
     @Test

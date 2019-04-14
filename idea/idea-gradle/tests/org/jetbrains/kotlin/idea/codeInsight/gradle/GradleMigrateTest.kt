@@ -23,7 +23,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
-@RunWith(JUnit3RunnerWithInners::class)
 class GradleMigrateTest : GradleImportingTestCase() {
     @Test
     @TargetVersions("4.4+")
